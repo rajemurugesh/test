@@ -1,19 +1,11 @@
-//imports
-const express = require("express");
-const cors = require('cors');
-
-const app = express();
-const port = process.env.PORT || 5000;
-
-//middlewares
-app.use(express.json())
-app.use(cors())
+const express = require('express');
+const app = express()
+const port = 3000
 
 app.get('/', (req, res)=>{
-    res.send('hello welcome')
+    res.send('hello world')
 })
 
-//server
 app.listen(port, () => {
-    console.log(`Server is running on port ${port}`)
+    console.log(`Example app listening on port${port}`)
 })
